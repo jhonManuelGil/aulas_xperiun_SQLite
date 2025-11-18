@@ -9,9 +9,9 @@ Este minicurso de 1 hora foi desenvolvido para quem deseja sair do zero e conqui
 Com a crescente demanda por profissionais de dados, dominar SQL pode abrir oportunidades em diversas áreas, como tecnologia, finanças, saúde, varejo e muito mais.
 
 ## O que eu aprendi:
-✅ Comandos Básicos – Entenda a estrutura e as sintaxes essenciais do SQL.
-✅ Consultas e Filtragem – Extraia, analise e manipule dados com facilidade.
-✅ Trabalhando com Diferentes SGBDs – Explore as ferramentas mais utilizadas no mercado.
-✅ Práticas Reais – Exercícios aplicados para você colocar o conhecimento em ação.
+- ✅ Comandos Básicos – Entenda a estrutura e as sintaxes essenciais do SQL.
+- ✅ Consultas e Filtragem – Extraia, analise e manipule dados com facilidade.
+- ✅ Trabalhando com Diferentes SGBDs – Explore as ferramentas mais utilizadas no mercado.
+- ✅ Práticas Reais – Exercícios aplicados para você colocar o conhecimento em ação.
 
 ----
