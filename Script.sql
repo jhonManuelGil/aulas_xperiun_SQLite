@@ -1,4 +1,3 @@
-
 -- como sazer chamdo SQLite
 SELECT ArtistId AS Artist_ID, Name AS Artist_Name
 FROM artists LIMIT 15;
@@ -52,7 +51,7 @@ AND "City" =  "São Paulo";
 SELECT * from customers 
 WHERE Country = "Brazil" 
 AND "State" =  "SP" 
-AND "City" <>  "São Paulo" LIMIT 1 ;
+AND "City" <>  "São Paulo" LIMIT 1;
 
 
 
@@ -63,9 +62,62 @@ AND "City" <>  "São Paulo";
 
 
 
+-- Agrupando valores com as aggregation functions
+
+SELECT COUNT(*) FROM customers where Country = 'Brazil';
+
+-- forma incorreta
+SELECT * FROM customers where Country = 'Brazil';
+
+
+-- contar cliente de forma mas correta
+SELECT State, COUNT(*) AS  Cliente FROM customers where Country = 'Brazil' GROUP BY State;
 
 
 
+SELECT City,  State, COUNT(*) AS  Cliente FROM customers where Country = 'Brazil' GROUP BY City,  State;
+
+
+
+SELECT 
+    BillingCity, 
+    BillingState, COUNT(*) 
+FROM invoices  
+where BillingCountry = 'Brazil' GROUP BY BillingCity, 
+    BillingState;
+
+
+-- pegar os cliente ,as de 10 notas
+
+
+SELECT 
+    BillingCity, 
+    BillingState, COUNT(*) AS QTDNotas
+FROM invoices  
+where BillingCountry = 'Brazil' GROUP BY BillingCity, 
+      BillingState;
+
+-- Filtrando dados agrupados
+
+SELECT 
+    BillingCity, 
+    BillingState, COUNT(*) AS QTDNotas 
+FROM invoices  
+where BillingCountry = 'Brazil' 
+GROUP BY BillingCity, 
+         BillingState
+HAVING COUNT(*) > 10; -- 14
+
+
+SELECT 
+    BillingCity, 
+    BillingState, COUNT(*) AS QTDNotas, SUM(Total) AS VlrNotas -- = São Paulo	SP	35	190.1
+FROM invoices  
+where BillingCountry = 'Brazil' 
+GROUP BY BillingCity, 
+         BillingState
+HAVING COUNT(*) < 10 AND SUM(Total) > 38; 
+-- = São José dos Campos	SP	7	39.62
 
 
 
