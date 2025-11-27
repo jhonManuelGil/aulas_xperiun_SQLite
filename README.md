@@ -15,3 +15,7 @@ Com a crescente demanda por profissionais de dados, dominar SQL pode abrir oport
 - ✅ Práticas Reais – Exercícios aplicados para você colocar o conhecimento em ação.
 
 ----
+
+
+
+![xperiun_SQLite](/mini_sql.png)
